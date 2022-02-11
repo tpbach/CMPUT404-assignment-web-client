@@ -120,6 +120,8 @@ class HTTPClient(object):
             path = "/"
         
         # Format arguments with & in between
+        # Inspiration taken from CB Bailey
+        # https://stackoverflow.com/a/7277102
         if args:
             postBody = "&".join(f"{i}={j}" for i, j in args.items())
         else:
